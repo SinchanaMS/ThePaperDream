@@ -1,0 +1,92 @@
+@import "../../../App.css";
+
+.carousel-base {
+    height: 31rem;
+    width: 100%;
+    margin: 1rem auto;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    overflow-x: scroll; 
+}
+
+.carousel-base::-webkit-scrollbar {
+    display: none;
+}
+
+.slide:nth-child(1){
+    background: var(--CAROUSEL-BG-ONE)
+}
+
+.slide:nth-child(2){
+    background: var(--CAROUSEL-BG-TWO)
+}
+
+.slide:nth-child(3){
+    background: var(--CAROUSEL-BG-THREE);
+}
+
+.slide {
+    height: 100%;
+    min-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.carousel-img {
+    height: 100%;
+    width: 50%;
+    max-height: 100%;
+}
+
+.carousel-img img {
+    max-height: 100%;
+    width: auto;
+    height: 100%;
+}
+
+.carousel-child:nth-child(2) {
+    background: var(--CAROUSEL-TEXT-BG);
+    padding: 1rem;
+    border-radius: 7px;
+    margin: 2rem;
+}
+
+.grid-text {
+    width: 50%;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;  
+}
+
+.grid-text h1{
+    font-family: 'Aleo', serif;
+    font-weight: 700;
+    font-size: 64px;
+    font-family: 'Amatic SC', cursive;
+    color: var(--PASTEL-BLUE-PRI);   
+}
+
+.grid-text>button.pri-btn {
+    width: 50%;
+    align-self: center;
+    background: var(--PASTEL-BLUE-PRI);
+    color: var(--PURE-WHITE)
+}
+
+.grid-text>button.sec-btn {
+    width: 50%;
+    align-self: center;
+    background: var(--PASTEL-BLUE-SEC);
+    color: var(--PURE-WHITE)
+}
+
+.grid-text>button:hover {
+    cursor: pointer;
+}

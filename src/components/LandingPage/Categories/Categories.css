@@ -1,0 +1,47 @@
+@import "../../../App.css";
+
+.categories-base {
+    height: auto;
+    background: var(--CATEGORIES-BG);
+    padding-bottom: 7px
+}
+
+.grids-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.grid-child {
+    position: relative;
+}
+
+.grids-5 .grid-child {
+    height: 10rem;
+    max-height: 100%;
+}
+
+.grids-5 .grid-child img {
+    height: 100%;
+    width: auto;
+    max-height: 90%;
+    margin: 1rem auto;
+    opacity: 80%;
+    border-radius: 50%;
+    outline: 1px solid var(--SECONDARY-COLOR);
+}
+
+.overlay-text {
+    width: 60%;
+    opacity: 90%;
+    margin: auto;
+    background: var(--PURE-WHITE);  
+}
+
+.grid-child .overlay-text .link-text{
+    color: var(--SECONDARY-TEXT);
+}
+
+.overlay-text:hover {
+    cursor: pointer;
+}

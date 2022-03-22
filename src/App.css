@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,400&family=Andika+New+Basic:ital,wght@1,700&family=Comforter&family=Montserrat:ital,wght@1,800&family=Open+Sans:wght@300;500&family=Roboto:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,400&family=Amatic+SC:wght@400;700&family=Andika+New+Basic:ital,wght@1,700&family=Comforter&family=Montserrat:ital,wght@1,800&family=Open+Sans:wght@300;500&family=Roboto:wght@100;700&display=swap');
 @import url("https://clay-ui.netlify.app/stylesheets/index.css");
 
 :root {
   --HEADER-BG: #fcfaf7;
   --SEARCH-BAR-BG: #f0ecec;
-  --CATEGORIES-BG: #f5ebeb;
-  --CAROUSEL-BG: #f0e8e3;
-  --CAROUSEL-TEXT-BG: #f0e8e3;
+  --CATEGORIES-BG: #523d3d;
+  --CAROUSEL-BG-ONE: #EFE1DA;
+  --CAROUSEL-BG-TWO: #D7D4ED;
+  --CAROUSEL-BG-THREE: #d3bfb6;
+  --CAROUSEL-TEXT-BG: #e4d5cd;
   --NEW-ARRIVALS-BG: #ebdcdc;
+  --PASTEL-BLUE-PRI: #565d7c;
+  --PASTEL-BLUE-SEC: #6972a0;
+}
+
+body {
+  font-family: Roboto, sans-sarif;
+  font-weight: 400;
 }
