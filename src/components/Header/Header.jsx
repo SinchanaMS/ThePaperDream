@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
-import mainLogo from "../../assets/mainLogo.png"
 import "./Header.css"
 
 export default function Header() {
   return (
     <header className="header shadow">
         <Link to="/">
-            <img className="main-logo" src={mainLogo} />
+            <img className="main-logo" src={process.env.PUBLIC_URL + 'assets/mainLogo.png'}/>
         </Link>
         <div className="search-bar">
             <Link to="/products" className="search-submit">

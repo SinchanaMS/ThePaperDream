@@ -1,14 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Cart from "../pages/Cart/Cart";
-import ProductsList from "../pages/ProductListing/ProductsList";
-import Wishlist from "../pages/Wishlist/Wishlist";
-import Login from "../pages/Authentication/Login";
-import SignUp from "../pages/Authentication/SignUp"
-import React from 'react'
-import LandingPage from "../pages/LandingPage/LandingPage";
-import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import MockAPI from "../pages/api-response/ApiResponse";
-
+import { Login, SignUp, Cart, LandingPage, PageNotFound, ProductsList, Wishlist} from "../pages/pages";
 
 export default function Router() {
   return (
