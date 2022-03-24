@@ -3,25 +3,18 @@
 .categories-base {
     height: auto;
     background: var(--CATEGORIES-BG);
-    padding-bottom: 7px
+    padding-bottom: 7px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.grids-5 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-}
-
-.grid-child {
+.category {
+    height: 10rem;
+    max-height: 100%;
     position: relative;
 }
 
-.grids-5 .grid-child {
-    height: 10rem;
-    max-height: 100%;
-}
-
-.grids-5 .grid-child img {
+.category img {
     height: 100%;
     width: auto;
     max-height: 90%;
@@ -32,13 +25,16 @@
 }
 
 .overlay-text {
-    width: 60%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
     opacity: 90%;
     margin: auto;
-    background: var(--PURE-WHITE);  
+    background: var(--PURE-WHITE);
 }
 
-.grid-child .overlay-text .link-text{
+.category .overlay-text .link-text{
     color: var(--SECONDARY-TEXT);
 }
 
