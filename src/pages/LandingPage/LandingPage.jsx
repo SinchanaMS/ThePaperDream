@@ -1,4 +1,3 @@
-import React from 'react'
 import { Categories, Carousel } from '../../components/components'
 
 export default function LandingPage() {
