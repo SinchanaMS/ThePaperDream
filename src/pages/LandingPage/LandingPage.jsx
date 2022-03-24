@@ -1,7 +1,10 @@
-import React from 'react'
+import { Categories, Carousel } from '../../components/components'
 
 export default function LandingPage() {
   return (
-    <div>LandingPage</div>
+    <div>
+      <Categories/>
+      <Carousel/>
+    </div>
   )
 }

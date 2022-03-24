@@ -1,0 +1,43 @@
+@import "../../../App.css";
+
+.categories-base {
+    height: auto;
+    background: var(--CATEGORIES-BG);
+    padding-bottom: 7px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.category {
+    height: 10rem;
+    max-height: 100%;
+    position: relative;
+}
+
+.category img {
+    height: 100%;
+    width: auto;
+    max-height: 90%;
+    margin: 1rem auto;
+    opacity: 80%;
+    border-radius: 50%;
+    outline: 1px solid var(--SECONDARY-COLOR);
+}
+
+.overlay-text {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    opacity: 90%;
+    margin: auto;
+    background: var(--PURE-WHITE);
+}
+
+.category .overlay-text .link-text{
+    color: var(--SECONDARY-TEXT);
+}
+
+.overlay-text:hover {
+    cursor: pointer;
+}
