@@ -1,5 +1,11 @@
 @import "../../../App.css";
 
+.page-body{
+    position: absolute;
+    top: 4rem;
+    width: 100%
+}
+
 .categories-base {
     height: auto;
     background: var(--CATEGORIES-BG);

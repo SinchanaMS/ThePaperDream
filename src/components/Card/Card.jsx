@@ -1,0 +1,38 @@
+import { Link } from 'react-router-dom'
+
+export default function Card({products}) {
+    const {prodimage, title, description, price: {original, discounted, discount}, rating} = products
+    return (
+        <div>
+            <div className="card-container shadow">
+                <div className="card-child card-header">
+                    <img className="card-img" src={prodimage} alt={title}/>
+                    <h4 className="card-title">{title}</h4>
+                    <h5>Rating: {rating}/5</h5>
+                    <div className="card-subtitle price-details">
+                        <p className="p-lg"> Rs.{discounted} </p>
+                        <p className="original">Rs.{original}  </p> 
+                        <p className="discount"> {discount}% OFF</p>
+                    </div>
+                </div>
+                <div className="card-badge card-badge-def badge-right products-badge">
+                    <span className="material-icons md-24 material-icons-outlined">
+                    favorite_border
+                    </span>
+                </div>
+                <div className="card-child card-body">
+                    <hr/>
+                    <p className="card-desc">{description}</p>
+                </div>
+                <div className="card-child card-footer">
+                    <button className="btn link-btn-outline icon-dark">
+                        <Link to="/cart" className='link-in-btn'>Add to Cart</Link>
+                    </button>
+                    <button className="btn link-btn-outline icon-dark">
+                        <Link to="/wishlist" className='link-in-btn'>Add to Wishlist</Link>
+                    </button>
+                </div>
+            </div>
+        </div>
+    )
+}

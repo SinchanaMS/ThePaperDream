@@ -1,11 +1,14 @@
 @import "../../App.css";
 
 .header {
+    position: fixed;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     background: var(--HEADER-BG);
+    z-index: 1;
 }
 
 .main-logo{
