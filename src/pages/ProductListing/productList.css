@@ -1,11 +1,16 @@
 .products-container {
     position: absolute;
     width: 97vw;
-    top: 3.5rem;
+    top:2.5rem
 }
 
+.products-heading{
+    margin-top: 2.5rem;
+    text-align: center;
+}
 .products-list {
     position: absolute;
+    top: 2.7rem;
     left: 20rem;
     display: flex;
     flex-wrap: wrap;
