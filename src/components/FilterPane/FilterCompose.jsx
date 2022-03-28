@@ -12,7 +12,7 @@ const sortByPrice = ({sortby}, products) => {
     }
 }
 
-const sortByRating = ({rating}, products) => {
+const filterByRating = ({rating}, products) => {
     return products.filter(product => product.rating >= rating)
 }
 
@@ -33,7 +33,7 @@ const applyFilters = (filterState, ...args)=>(products)=>{
 export const getProductList =(filterState, products)=> applyFilters(
     filterState,
     sortByPrice,
-    sortByRating,
+    filterByRating,
     filterByCategory,
     filterByPriceRange
 )(products)
