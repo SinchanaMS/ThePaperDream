@@ -1,14 +1,15 @@
-.filter-pane {
+.products-container .filter-pane {
     position: fixed;
+    top: 5rem;
     margin: 2rem;
-    padding: 1rem;
+    padding: 12px;
     height: fit-content;
     width: 15rem;
     background: var(--CARD-BG);
 }
 
 .pane-child {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
 .filter-child {
