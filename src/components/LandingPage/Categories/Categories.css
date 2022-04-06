@@ -12,6 +12,7 @@
     height: 10rem;
     max-height: 100%;
     position: relative;
+    opacity: 0.8;
 }
 
 .category img {
@@ -19,7 +20,6 @@
     width: auto;
     max-height: 90%;
     margin: 1rem auto;
-    opacity: 0.8;
     border-radius: 50%;
     outline: 1px solid var(--SECONDARY-COLOR);
 }
@@ -29,7 +29,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 110%;
-    opacity: 0.9;
     margin: auto;
     background: var(--PURE-WHITE);
 }
