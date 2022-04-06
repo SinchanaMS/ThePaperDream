@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '../../contexts/AuthContext'
 import "./Login.css"
 
 export default function Login() {
@@ -9,7 +8,7 @@ export default function Login() {
   const [loginData, setLoginData] = useState({email: "", password: ""})
   const [loginError, setLoginError] = useState("")
   const [showPwd, setShowPwd] = useState(false)
-  
+
   const testUser = {
     email: "theMarauders@gmail.com",
     password:"FortunaMajor"
@@ -22,18 +21,16 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    sendLoginData(loginData)
+    submitLoginData(loginData)
   }
 
-  const sendLoginData = async (loginData) =>{
+  const submitLoginData = async (loginData) =>{
     try {
       const response = await axios.post("/api/auth/login", loginData)
-      console.log(response)
       if (response.status === 200){ 
-      const {data} = response;
-      const userToken = data.encodedToken
-      localStorage.setItem("userToken", userToken)
-      navigate("/products")
+        const userToken = response.data.encodedToken
+        localStorage.setItem("userToken", userToken)
+        navigate("/products")
       }
     } catch (error) {
       setLoginError("An error occurred.")
@@ -41,46 +38,48 @@ export default function Login() {
     }
   }
 
+  const guestLogin = () => {
+    submitLoginData(testUser)
+  }
+
   return (
     <div className='page-body'>
       <section className="login-container shadow">
         <h2 className="container-title">Login</h2>
         <form className="login-details" onSubmit={handleLogin}>
-            <div className="labelled-input label-top username">
-                <label className="label"> Email ID</label>
-                <input type="email" name="email" placeholder="jane.doe@email.com" onChange={setUserData}/>
+          <div className="labelled-input label-top username">
+            <label className="label"> Email ID</label>
+            <input type="email" name="email" placeholder="jane.doe@email.com" onChange={setUserData}/>
+          </div>
+          <div className="labelled-input label-top password">
+            <label className="label"> Password </label>
+            <span className="toggle-login-pwd material-icons material-icons-outlined" onClick={()=>setShowPwd(!showPwd)}>
+            {showPwd ? "visibility_off" : "visibility"}
+            </span>
+            <input type={showPwd ? "text" : "password"} name="password" placeholder="************" onChange={setUserData}/>
+          </div>
+          <div className="auth-opts">
+            <div className="checkbox-btn remember-me">
+              <input type="checkbox" name="checkbox"/>
+              <label className="label">Remember Me</label>
             </div>
-            <div className="labelled-input label-top password">
-                <label className="label"> Password </label>
-                <span className="toggle-login-pwd material-icons material-icons-outlined" onClick={()=>setShowPwd(!showPwd)}>
-                {showPwd ? "visibility_off" : "visibility"}
-                </span>
-                <input type={showPwd ? "text" : "password"} name="password" placeholder="************" onChange={setUserData}/>
-            </div>
-            <div className="auth-opts">
-                <div className="checkbox-btn remember-me">
-                    <input type="checkbox" name="checkbox"/>
-                    <label className="label">Remember Me</label>
-                </div>
-                <a href="#" className="forgot-pwd">Forgot Password?</a>
-            </div>
-            <div className="auth-btns">
+            <a href="#" className="forgot-pwd">Forgot Password?</a>
+          </div>
+          <div className="auth-btns">
             <button className="btn link-btn-outline login-btn icon-dark">
-                Login
+            Login
             </button>
-            <button className="btn link-btn-outline login-btn icon-dark" onClick={() => sendLoginData(testUser)}>
-                Test User
+            <button className="btn link-btn-outline login-btn icon-dark" onClick={() => guestLogin()}>
+            Test User
             </button>
-            </div>           
+          </div>           
         </form>
-        <br/>
         {loginError &&  <p className="val-error"> {loginError} </p>}
         <hr/>
-        <br/>
         <div className="new-user">
-            <Link to="/signup" className="link-in-btn p-lg">Create New Account</Link>
+          <Link to="/signup" className="link-in-btn p-lg">Create New Account</Link>
         </div>
-    </section>
+      </section>
     </div>
   )
 }

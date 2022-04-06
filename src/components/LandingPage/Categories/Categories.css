@@ -1,11 +1,5 @@
 @import "../../../App.css";
 
-.page-body{
-    position: absolute;
-    top: 4rem;
-    width: 100%
-}
-
 .categories-base {
     height: auto;
     background: var(--CATEGORIES-BG);
@@ -40,7 +34,7 @@
     background: var(--PURE-WHITE);
 }
 
-.category .overlay-text .link-text{
+.category .overlay-text .link-text {
     color: var(--SECONDARY-TEXT);
 }
 

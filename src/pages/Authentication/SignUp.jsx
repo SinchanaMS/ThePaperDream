@@ -1,12 +1,10 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '../../contexts/AuthContext'
 import "./SignUp.css"
 
 export default function SignUp() {
   const navigate = useNavigate()
-  const {setLoggedIn, setUserItems} = useAuth()
   const [signUpError, setSignUpError] = useState("")
   const [signUpData, setSignUpData] = useState({
     firstName:"",
@@ -15,6 +13,7 @@ export default function SignUp() {
     password:"",
     confirmPassword:""
   })
+
   const [showPassword, setShowPassword] = useState({
     password: false,
     confirmPassword: false
@@ -27,25 +26,24 @@ export default function SignUp() {
 
   const handleSubmit = e => {
     e.preventDefault()
-  sendSignUpData(signUpData)
+    sendSignUpData(signUpData)
   }
 
   async function sendSignUpData(data){
     if (data.password === data.confirmPassword) {
-    try { 
-      const response = await axios.post("/api/auth/signup",data)
-      if (response.status===201) {
-        setLoggedIn(true)
-        const {data} = response;
-        const userToken = data.encodedToken
-        localStorage.setItem("userToken", userToken)
-        navigate("/products")
+      try { 
+        const response = await axios.post("/api/auth/signup",data)
+        if (response.status===201) {
+          const {data} = response;
+          const userToken = data.encodedToken
+          localStorage.setItem("userToken", userToken)
+          navigate("/products")
+        }
+      } catch (error) {
+        setSignUpError("An error occurred.")
+        console.log(error)
       }
-    } catch (error) {
-      setSignUpError("An error occurred.")
-      console.log(error)
-    }}
-    else {
+    } else {
       setSignUpError("Passwords don't match!!")
     }
   }

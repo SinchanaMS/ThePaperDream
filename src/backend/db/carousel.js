@@ -4,19 +4,19 @@ export const carousel = [
   {
     _id: uuid(),
     carouselName: "Planners - Pastel Collection",
-    carouselSubtitle: "Starting at Rs. 599",
+    carouselSubtitle: "Starting at Rs. 499",
     carouselImg: process.env.PUBLIC_URL + 'assets/Carousel_Images/carousel.png'
   },
   {
     _id: uuid(),
     carouselName: "Washi Tapes - Celestial Collection",
-    carouselSubtitle: "Starting at Rs. 199",
+    carouselSubtitle: "Starting from Rs. 190",
     carouselImg: process.env.PUBLIC_URL + 'assets/Carousel_Images/carousel2.png'
   },
   {
     _id: uuid(),
     carouselName: "Journals - Zodiac Series",
-    carouselSubtitle: "Starting at Rs. 499",
+    carouselSubtitle: "Starting at Rs. 125",
     carouselImg: process.env.PUBLIC_URL + 'assets/Carousel_Images/carousel3.png'
   }
 ];
