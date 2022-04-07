@@ -7,13 +7,12 @@ export default function HorizontalCard({cartItem}) {
     const {deleteFromCart, incrementCart, decrementCart} = useCart()
     const {addToWishlist} = useWishlist()
 
-    function moveToWishlist(cartItem){
+    const moveToWishlist = (cartItem) => {
         addToWishlist(cartItem)
         deleteFromCart(cartItem)
     }
 
     return (
-        <div>
             <section className="cart-item">
                 <div className="card-block">
                     <div className="item-img-container">
@@ -36,6 +35,5 @@ export default function HorizontalCard({cartItem}) {
                     </div>
                 </div>
             </section>
-        </div>
     )
 }

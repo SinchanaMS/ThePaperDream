@@ -10,9 +10,7 @@ export default function Header() {
     const {wishlistCount} = useWishlist()
     const {cartCount}=useCart()
 
-    function handleLogin(e){
-        loggedIn  ?  logoutHandler() : navigate("/")
-    }
+    const handleLogin = (e) => loggedIn  ?  logoutHandler() : navigate("/")
 
     return (
         <header className="header shadow">
