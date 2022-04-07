@@ -1,13 +1,14 @@
 .products-container {
     position: absolute;
     width: 97vw;
-    top:2.5rem
+    top: 2.5rem
 }
 
-.products-heading{
+.products-heading {
     margin-top: 2.5rem;
     text-align: center;
 }
+
 .products-list {
     position: absolute;
     top: 2.7rem;
@@ -28,6 +29,7 @@
 
 .products-container .products-badge {
     background: none;
+    border: none;
     color: var(--DEFAULT-RED);
 }
 
@@ -45,6 +47,19 @@
 
 .products-container .btn {
     width: 100%
+}
+
+.products-container .btn:hover {
+    cursor: pointer;
+}
+
+.btn.pri-btn {
+    background: var(--BTN-DARK)
+}
+
+.btn.sec-btn {
+    background: var(--BTN-LIGHT);
+    outline: 1px solid var(--BTN-OUTLINE);
 }
 
 .products-container .price-details {

@@ -1,7 +1,7 @@
-import React from 'react'
+import EmptyPage from "../../components/EmptyPage";
 
 export default function PageNotFound() {
   return (
-    <div>PageNotFound</div>
+    <div className="page-body"><EmptyPage text={"Hmmm! Page not found. Did you navigate right?"}/></div>
   )
 }

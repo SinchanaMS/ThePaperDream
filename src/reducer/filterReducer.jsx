@@ -3,7 +3,7 @@ export const filterReducer = (filterState, action) => {
         sortby:"",
         category:[],
         rating: "",
-        range: 200
+        range: 700
     }
     switch (action.type){
         case "SORT_BY":
