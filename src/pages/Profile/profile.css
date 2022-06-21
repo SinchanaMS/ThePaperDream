@@ -1,0 +1,165 @@
+.profile-body {
+  display: flex;
+  padding-top: 7rem;
+  gap: 3rem;
+}
+
+.user-details {
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 3rem 2rem 0;
+  width: 64rem;
+}
+
+.user-details li {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--CARD-BG);
+}
+
+.mini-card {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  margin: 1rem auto;
+  border-radius: 5px;
+  height: 10rem;
+  width: 64rem;
+
+  background-color: var(--CARD-BG);
+}
+
+.mini-image {
+  aspect-ratio: 1/1;
+  background-color: var(--CARD-BG);
+  margin: 5px;
+}
+
+.mini-card img {
+  height: 100%;
+  width: auto;
+  margin: auto;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.p-grey {
+  color: gray;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.orders-section {
+  display: flex;
+  gap: 3rem;
+}
+
+.orders-page {
+  display: flex;
+  padding-top: 7rem;
+  gap: 3rem;
+}
+
+.profile-nav-bar {
+  width: 15rem;
+  height: 20rem;
+  margin: 1rem;
+}
+
+.profile-nav-bar .navLink {
+  flex-grow: 1;
+  background-color: var(--CARD-BG);
+  color: black;
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.address-list {
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 3rem 2rem 0;
+  width: 64rem;
+}
+
+.address {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--CARD-BG);
+  position: relative;
+}
+
+.new.address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 24px;
+  color: rgb(183, 182, 182);
+}
+
+.icon:hover {
+  color: var(--PRIMARY-BG);
+  cursor: pointer;
+}
+
+.address-options {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.address-option {
+  border: none;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.address-option:hover {
+  cursor: pointer;
+  background-color: rgb(197, 195, 195);
+}
+
+.def-address {
+  position: absolute;
+  font-size: 18px;
+  top: 1.2rem;
+  right: 1.2rem;
+  border: none;
+  color: var(--DEFAULT-GREEN);
+}
+
+.cart-items {
+  width: fit-content;
+  align-self: flex-end;
+  display: flex;
+  gap: 5px;
+}
+
+.navLink.active {
+  background-color: var(--PRIMARY-BG);
+  color: white;
+}
+
+.item-details {
+  width: 100%;
+  padding: 0;
+}
+
+.reorder {
+  align-self: flex-end;
+}
+
+.profile-body {
+  display: flex;
+}
