@@ -1,82 +1,83 @@
 .products-container {
-    position: absolute;
-    width: 97vw;
-    top: 2.5rem
+  position: absolute;
+  width: 97vw;
+  top: 2.5rem;
 }
 
 .products-heading {
-    margin-top: 2.5rem;
-    text-align: center;
+  margin-top: 2.5rem;
+  text-align: center;
 }
 
 .products-list {
-    position: absolute;
-    top: 2.7rem;
-    left: 20rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 1rem auto;
-    padding: 1rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 18rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin: 1rem auto;
+  padding: 1rem;
 }
 
 .products-container .card-desc {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .products-container .products-badge {
-    background: none;
-    border: none;
-    color: var(--DEFAULT-RED);
+  background: none;
+  border: none;
+  color: var(--DEFAULT-RED);
 }
 
 .products-badge:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .products-container .card-footer {
-    display: flex;
-    flex-direction: column;
-    outline: none;
-    width: 100%;
-    margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 .products-container .btn {
-    width: 100%
+  width: 100%;
 }
 
 .products-container .btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn.pri-btn {
-    background: var(--BTN-DARK)
+  background: var(--PRIMARY-BG);
+  border: 1px solid var(--PRIMARY-BG);
 }
 
 .btn.sec-btn {
-    background: var(--BTN-LIGHT);
-    outline: 1px solid var(--BTN-OUTLINE);
+  background-color: transparent;
+  border: 1px solid var(--PRIMARY-BG);
 }
 
 .products-container .price-details {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .original {
-    text-decoration-line: line-through;
-    color: var(--DEFAULT-RED);
+  text-decoration-line: line-through;
+  color: var(--DEFAULT-RED);
 }
 
 .discount {
-    color: var(--DARK-GREEN)
+  color: var(--DARK-GREEN);
 }
 
 .card-container {
-    background: var(--CARD-BG)
+  background: var(--CARD-BG);
 }

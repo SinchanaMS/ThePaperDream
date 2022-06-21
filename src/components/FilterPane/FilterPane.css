@@ -1,55 +1,62 @@
 .products-container .filter-pane {
-    position: fixed;
-    top: 5rem;
-    margin: 2rem;
-    padding: 12px;
-    height: fit-content;
-    width: 15rem;
-    background: var(--CARD-BG);
+  position: fixed;
+  top: 5rem;
+  margin: 2rem;
+  padding: 12px;
+  height: fit-content;
+  width: 15rem;
+  background: var(--CARD-BG);
 }
 
 .pane-child {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .filter-child {
-    padding: 3px;
+  padding: 3px;
 }
 
 .filter-child label input {
-    margin-right: 7px;
+  margin-right: 7px;
 }
 
 .clear-filter {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .clear-filter button {
-    padding: 0px 5px;
-    border: none;
+  padding: 0px 5px;
+  border: none;
+  background-color: none;
 }
 
 .clear-filter button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .price-range {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .price-slider {
-    width: 100%;
+  width: 100%;
 }
 
 .price-slider:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.filter-pane input[type=radio],
-input[type=checkbox] {
-    accent-color: inherit;
-    ;
+.filter-pane input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--PRIMARY-BG);
+  height: 1rem;
+  width: 1rem;
+}
+.filter-pane input[type="radio"],
+input[type="checkbox"],
+[type="range"] {
+  accent-color: var(--PRIMARY-BG);
 }

@@ -1,18 +1,14 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,400&family=Amatic+SC:wght@400;700&family=Andika+New+Basic:ital,wght@1,700&family=Comforter&family=Montserrat:ital,wght@1,800&family=Open+Sans:wght@300;500&family=Roboto:wght@100;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,400&family=Amatic+SC:wght@400;700&family=Andika+New+Basic:ital,wght@1,700&family=Comforter&family=Montserrat:ital,wght@1,800&family=Open+Sans:wght@300;500&family=Roboto:wght@100;700&display=swap");
 @import url("https://clay-ui.netlify.app/stylesheets/index.css");
 
 :root {
-  --HEADER-BG: #fcfaf7;
-  --SEARCH-BAR-BG: #f0ecec;
-  --CATEGORIES-BG: #523d3d;
-  --CAROUSEL-BG-ONE: #EFE1DA;
-  --CAROUSEL-BG-TWO: #D7D4ED;
-  --CAROUSEL-BG-THREE: #d3bfb6;
-  --CAROUSEL-TEXT-BG: #e4d5cd;
+  --HEADER-BG: #f5f3f3;
+  --SEARCH-BAR-BG: #e1dede;
+  --CATEGORIES-BG: #4a3636;
+  --CAROUSEL-BG: #f6f1ef;
   --NEW-ARRIVALS-BG: #ebdcdc;
-  --PASTEL-BLUE-PRI: #565d7c;
-  --PASTEL-BLUE-SEC: #6972a0;
+  --PRIMARY-BG: #5c4545;
   --CARD-BG: #f5f3f3;
 }
 
@@ -21,17 +17,17 @@ body {
   font-weight: 400;
 }
 
-.page-body{
+.page-body {
   position: absolute;
   top: 4rem;
   width: 100%;
 }
 
-.empty-description{
-  color: rgb(82, 80, 80)
+.empty-description {
+  color: rgb(82, 80, 80);
 }
 
-.empty-page{
+.empty-page {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -39,12 +35,36 @@ body {
   text-align: center;
 }
 
-.empty-icon{
-  font-size:48px;
+.empty-icon {
+  font-size: 48px;
   margin: 1rem 0px;
   color: rgb(82, 80, 80);
 }
 
-.products-list .empty-page{
+.products-list .empty-page {
   left: 60%;
+}
+
+.card-container {
+  width: 17rem;
+}
+
+.card-body {
+  min-height: 3.68rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }

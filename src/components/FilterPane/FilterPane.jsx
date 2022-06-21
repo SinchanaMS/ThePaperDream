@@ -49,7 +49,7 @@ export default function FilterPane() {
             <p>200</p>
             <p>1000</p>
           </div>
-          <inputn
+          <input
             type="range"
             min="200"
             max="1000"
