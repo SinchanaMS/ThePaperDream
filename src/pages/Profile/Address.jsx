@@ -9,6 +9,7 @@ import {
 import { useAuth } from "../../contexts/AuthContext";
 import AddressModal from "../../components/AddressModal/AddressModal";
 import { useCart } from "../../contexts/CartContext";
+import Toast from "../../components/Toast/Toast";
 
 export default function Address() {
   const { cart, cartFinalAmout, clearCart } = useCart();
@@ -35,6 +36,63 @@ export default function Address() {
         (eachAddress) => eachAddress.id !== address.id
       ),
     }));
+  };
+  const loadScript = async (url) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = url;
+
+      script.onload = () => resolve(true);
+
+      script.onerror = () => resolve(false);
+
+      document.body.appendChild(script);
+    });
+  };
+
+  const showRazorpay = async () => {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+    if (!res) {
+      Toast({
+        type: "error",
+        message: "Razorpay Payment failed to load, check your connection",
+      });
+      return;
+    }
+
+    const options = {
+      key: process.env.REACT_APP_RAZORPAY_KEY_ID,
+      currency: "INR",
+      name: "The Paper Dream",
+      description: "Thank you for shopping with us",
+      amount: cartFinalAmout * 100,
+      image: "",
+
+      handler: function (response) {
+        if (response.razorpay_payment_id) {
+          Toast({
+            type: "success",
+            message: "Payment successful, order placed",
+          });
+          setUserDetails((userDetails) => ({
+            ...userDetails,
+            orders: [...userDetails.orders, ...cart],
+          }));
+          clearCart();
+          navigate("/orders");
+        }
+      },
+
+      prefill: {
+        name: "Daniel Felton",
+        email: "theMarauders@gmail.com",
+        contact: 9955995599,
+      },
+    };
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
   };
 
   return (
@@ -101,7 +159,9 @@ export default function Address() {
           <AddressModal setShowAddressModal={setShowAddressModal} />
         )}
         {cart.length > 0 && (
-          <button className="btn pri-btn">Proceed with Payment</button>
+          <button className="btn pri-btn" onClick={showRazorpay}>
+            Proceed with Payment
+          </button>
         )}
       </ul>
     </div>
