@@ -1,5 +1,4 @@
 import React from "react";
-
 import { MdClose } from "react-icons/md";
 import { useAuth } from "../../contexts/AuthContext";
 import "./AddressModal.css";
