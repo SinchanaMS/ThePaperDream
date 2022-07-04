@@ -55,7 +55,7 @@
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-.badge-pri {
+.badge.badge-pri {
   background-color: var(--PRIMARY-BG);
   color: white;
 }
@@ -65,6 +65,29 @@
   width: 1.25rem;
 }
 
-.md-28 {
+.badge-icon-container .md-28 {
   font-size: 28px;
+}
+
+.user-dialog {
+  background-color: var(--CARD-BG);
+  position: absolute;
+  right: 1rem;
+  width: 8rem;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.user-options {
+  padding: 5px;
+  background-color: var(--DIALOG-OPTIONS-BG);
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.user-options:hover {
+  background-color: var(--PRIMARY-BG);
+  color: white;
 }

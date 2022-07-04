@@ -1,14 +1,16 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import { useCart } from "../../contexts/CartContext";
 import { useWishlist } from "../../contexts/WishlistContext";
 import "./Header.css";
+import { useState } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
   const { loggedIn, logoutHandler } = useAuth();
   const { wishlistCount } = useWishlist();
   const { cartCount } = useCart();
+  const [showUserDialog, setShowUserDialog] = useState(false);
 
   const handleLogin = (e) => (loggedIn ? logoutHandler() : navigate("/"));
 
@@ -28,7 +30,7 @@ export default function Header() {
         <input type="text" className="search-input" placeholder="Search" />
       </div>
       <ul className="header-actions">
-        {loggedIn ? (
+        {loggedIn && (
           <div className="header-actions">
             <li>
               <Link to="/wishlist" className="header-ctas">
@@ -54,33 +56,51 @@ export default function Header() {
                 </div>
               </Link>
             </li>
-            <li>
-              <Link to="/profile" className="header-ctas">
-                Profile
-              </Link>
-            </li>
           </div>
-        ) : (
-          ""
         )}
 
         {loggedIn ? (
           <li>
-            <Link to="/" onClick={handleLogin}>
-              <h4>Logout</h4>
-            </Link>
+            <div
+              className="badge-icon-container relative hover-pointer"
+              onClick={() => setShowUserDialog((prev) => !prev)}
+            >
+              <span class="material-icons md-28 material-symbols-outlined">
+                person
+              </span>
+            </div>
+            {showUserDialog && (
+              <div className="user-dialog shadow flex-column">
+                <Link to="/profile" className="user-options">
+                  Profile
+                </Link>
+                <Link to="/" className="user-options" onClick={handleLogin}>
+                  Logout
+                </Link>
+              </div>
+            )}
           </li>
         ) : (
           <div className="header-actions">
             <li>
-              <Link to="/login" className="header-ctas" onClick={handleLogin}>
-                <h4>Login</h4>
-              </Link>
-            </li>
-            <li>
-              <Link to="/signup" className="header-ctas">
-                <h4>Sign Up</h4>
-              </Link>
+              <div className="badge-icon-container relative">
+                <span class="material-icons md-28 material-symbols-outlined">
+                  person
+                </span>
+              </div>
+              <div className="user-dialog shadow flex-column">
+                <Link
+                  to="/login"
+                  className="user-options"
+                  onClick={handleLogin}
+                >
+                  Login
+                </Link>
+
+                <Link to="/signup" className="user-options">
+                  Sign Up
+                </Link>
+              </div>
             </li>
           </div>
         )}
