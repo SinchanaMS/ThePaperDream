@@ -26,18 +26,10 @@
   background: var(--SEARCH-BAR-BG);
 }
 
-.search-submit {
-  text-align: center;
-  padding-top: 5px;
-}
-
-.search-submit:hover {
-  cursor: pointer;
-}
-
 .search-input {
   border: none;
   background: transparent;
+  padding: 5px;
 }
 
 .search-input:focus {

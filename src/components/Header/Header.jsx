@@ -4,12 +4,14 @@ import { useCart } from "../../contexts/CartContext";
 import { useWishlist } from "../../contexts/WishlistContext";
 import "./Header.css";
 import { useState } from "react";
+import { useFilter } from "../../contexts/FilterContext";
 
 export default function Header() {
   const navigate = useNavigate();
   const { loggedIn, logoutHandler } = useAuth();
   const { wishlistCount } = useWishlist();
   const { cartCount } = useCart();
+  const { filterState, filterDispatch } = useFilter();
   const [showUserDialog, setShowUserDialog] = useState(false);
 
   const handleLogin = (e) => (loggedIn ? logoutHandler() : navigate("/"));
@@ -24,10 +26,15 @@ export default function Header() {
         />
       </Link>
       <div className="search-bar">
-        <Link to="/products" className="search-submit">
-          <span className="material-icons material-icons-outlined">search</span>
-        </Link>
-        <input type="text" className="search-input" placeholder="Search" />
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search"
+          value={filterState.searchFor}
+          onChange={(e) =>
+            filterDispatch({ type: "SEARCH_FOR", payload: e.target.value })
+          }
+        />
       </div>
       <ul className="header-actions">
         {loggedIn && (
