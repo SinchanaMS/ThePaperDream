@@ -56,7 +56,8 @@ input[type="checkbox"]:hover {
   width: 100%;
   margin-bottom: 1rem;
 }
-.link-btn-outline.login-btn {
+
+.login-btn {
   min-width: 8rem;
   margin: auto;
 }
@@ -66,6 +67,8 @@ input[type="checkbox"]:hover {
 }
 
 .new-user {
+  margin-top: 1rem;
+  color: var(--PRIMARY-BG);
   text-align: center;
 }
 

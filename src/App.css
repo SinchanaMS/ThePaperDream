@@ -10,11 +10,21 @@
   --NEW-ARRIVALS-BG: #ebdcdc;
   --PRIMARY-BG: #5c4545;
   --CARD-BG: #f5f3f3;
+  --DIALOG-OPTIONS-BG: #e9e2e2;
 }
 
 body {
   font-family: Roboto, sans-sarif;
   font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d3d1d1;
+  border-radius: 10px;
 }
 
 .page-body {
@@ -67,4 +77,8 @@ button:hover {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.hover-pointer {
+  cursor: pointer;
 }

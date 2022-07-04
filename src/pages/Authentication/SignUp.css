@@ -22,6 +22,7 @@
 }
 
 .new-user-form input[type="text"],
+input[type="email"],
 [type="password"] {
   max-width: 100%;
   min-width: 40%;
@@ -35,6 +36,8 @@
 }
 
 .existing-user {
+  text-align: center;
+  color: var(--PRIMARY-BG);
   text-align: center;
 }
 
@@ -54,9 +57,9 @@
 
 .toggle-pwd {
   position: absolute;
-  top: 0.4rem;
-  align-self: flex-end;
-  margin-right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
   color: var(--DEFAULT-GREY);
 }
 

@@ -119,13 +119,8 @@ export default function SignUp() {
             </span>
           </div>
           {signUpError && <p className="val-error"> {signUpError}</p>}
-          <div className="checkbox-btn t-and-c">
-            <input type="checkbox" name="checkbox" required />
-            <label className="label">I accept all Terms & Conditions</label>
-          </div>
-          <button className="btn link-btn-outline signup-btn icon-dark">
-            Sign Up
-          </button>
+
+          <button className="btn signup-btn pri-btn">Sign Up</button>
           <div className="existing-user">
             <Link to="/login" className="link-in-btn p-lg">
               Already have an account

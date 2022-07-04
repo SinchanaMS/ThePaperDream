@@ -1,32 +1,30 @@
 .categories-base {
   height: auto;
   background: var(--CATEGORIES-BG);
-  padding-bottom: 7px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 
 .category {
   height: 10rem;
-  max-height: 100%;
   position: relative;
   opacity: 0.8;
+  margin: 1rem auto;
 }
 
 .category img {
   height: 100%;
   width: auto;
-  max-height: 90%;
   margin: 1rem auto;
   border-radius: 50%;
 }
 
-.overlay-text {
-  top: 45%;
+.category .overlay-text {
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 110%;
-  margin: auto;
   background: var(--PURE-WHITE);
 }
 

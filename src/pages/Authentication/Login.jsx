@@ -71,21 +71,10 @@ export default function Login() {
               onChange={setUserData}
             />
           </div>
-          <div className="auth-opts">
-            <div className="checkbox-btn remember-me">
-              <input type="checkbox" name="checkbox" />
-              <label className="label">Remember Me</label>
-            </div>
-            <a href="#" className="forgot-pwd">
-              Forgot Password?
-            </a>
-          </div>
           <div className="auth-btns">
-            <button className="btn link-btn-outline login-btn icon-dark">
-              Login
-            </button>
+            <button className="btn login-btn pri-btn">Login</button>
             <button
-              className="btn link-btn-outline login-btn icon-dark"
+              className="btn login-btn sec-btn"
               onClick={() => guestLogin()}
             >
               Test User

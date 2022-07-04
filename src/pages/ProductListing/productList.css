@@ -59,7 +59,12 @@
 }
 
 .btn.sec-btn {
-  background-color: transparent;
+  background: var(--CARD-BG);
+  border: 1px solid var(--PRIMARY-BG);
+}
+
+.btn.sec-btn:hover {
+  background: #fff;
   border: 1px solid var(--PRIMARY-BG);
 }
 

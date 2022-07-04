@@ -12,7 +12,7 @@ export default function Carousel() {
   };
 
   return (
-    <section className="carousel-base grid-carousel carousel-slides">
+    <section className="carousel-base carousel-slides">
       {carousel.map(
         ({ carouselName, carouselSubtitle, carouselImg, categoryName }) => (
           <div className="slide" key={carouselName}>
