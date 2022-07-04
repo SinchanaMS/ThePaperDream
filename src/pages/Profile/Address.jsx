@@ -68,7 +68,7 @@ export default function Address() {
       name: "The Paper Dream",
       description: "Thank you for shopping with us",
       amount: cartFinalAmout * 100,
-      image: "",
+      image: "assets/tpdLogo.png",
 
       handler: function (response) {
         if (response.razorpay_payment_id) {
@@ -89,6 +89,10 @@ export default function Address() {
         name: "Daniel Felton",
         email: "theMarauders@gmail.com",
         contact: 9955995599,
+      },
+
+      theme: {
+        color: "#5c4545",
       },
     };
     const paymentObject = new window.Razorpay(options);
